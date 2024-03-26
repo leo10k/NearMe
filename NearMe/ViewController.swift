@@ -25,11 +25,16 @@ class ViewController: UIViewController {
         searchTextField.delegate = self
         searchTextField.clipsToBounds = true
         searchTextField.backgroundColor = UIColor.white
-        searchTextField.placeholder = "Search"
-        searchTextField.textColor = UIColor.gray
+        searchTextField.textColor = UIColor.black
         searchTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
         searchTextField.leftViewMode = .always
         searchTextField.translatesAutoresizingMaskIntoConstraints = false
+        
+        let attributes: [NSAttributedString.Key: Any] = [
+            .foregroundColor: UIColor.gray
+        ]
+        searchTextField.attributedPlaceholder = NSAttributedString(string: "Search", attributes: attributes)
+        
         return searchTextField
     }()
     
@@ -47,7 +52,6 @@ class ViewController: UIViewController {
     }
     
     private func setupUI() {
-        
         
         view.addSubview(mapView)
         view.addSubview(searchTextField)
@@ -100,9 +104,15 @@ class ViewController: UIViewController {
         request.region = mapView.region
         
         let search = MKLocalSearch(request: request)
-        search.start { response, error in
+        search.start { [weak self] response, error in
             
             guard let response = response, error == nil else {return}
+            
+            let places = response.mapItems.map(PlaceAnnotation.init)
+            places.forEach{ place in
+                self?.mapView.addAnnotation(place)
+            }
+            
             print(response.mapItems)
         }
         
