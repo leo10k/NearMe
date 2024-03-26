@@ -10,9 +10,11 @@ import MapKit
 
 class ViewController: UIViewController {
     
+    var locationMenager: CLLocationManager?
+    
     lazy var mapView: MKMapView = {
         let map = MKMapView()
-        //map.showsUserLocation = true
+        map.showsUserLocation = true
         map.translatesAutoresizingMaskIntoConstraints = false
         return map
     }()
@@ -31,7 +33,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        
+        locationMenager = CLLocationManager()
+        locationMenager?.delegate = self
+        
+        locationMenager?.requestWhenInUseAuthorization()
+        locationMenager?.requestAlwaysAuthorization()
+        locationMenager?.requestLocation()
         
         setupUI()
     }
@@ -64,5 +72,17 @@ class ViewController: UIViewController {
         searchTextField.returnKeyType = .go
     }
 
+}
+
+extension ViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
+    
 }
 
