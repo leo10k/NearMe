@@ -20,6 +20,7 @@ class PlacesTableViewController: UITableViewController {
         super.init(nibName: nil, bundle: nil)
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "PlaceCell")
+        sortPlacesByDistance()
         self.places.swapAt(indexForSelectedRow ?? 0, 0)
     }
     
@@ -40,6 +41,7 @@ class PlacesTableViewController: UITableViewController {
         
         let place = places[indexPath.row]
         let placeDetailVC = PlaceDetailViewController(place: place)
+        
         present(placeDetailVC, animated: true)
     }
     
@@ -62,5 +64,16 @@ class PlacesTableViewController: UITableViewController {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension PlacesTableViewController {
+    private func sortPlacesByDistance() {
+        self.places.sort { (place1, place2) -> Bool in
+            let distance1 = calculateDistance(from: userLocation, to: place1.location)
+            let distance2 = calculateDistance(from: userLocation, to: place2.location)
+            return distance1 < distance2
+        }
+        tableView.reloadData()
     }
 }
