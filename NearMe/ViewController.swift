@@ -170,9 +170,7 @@ extension ViewController: MKMapViewDelegate {
         
         presentPlacesSheet(places: self.places)
     }
-    
 }
-
 
 extension ViewController: CLLocationManagerDelegate {
     
