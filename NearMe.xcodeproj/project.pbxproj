@@ -13,6 +13,7 @@
 		8D1A7C1F2BB2657100A211E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D1A7C1E2BB2657100A211E5 /* Assets.xcassets */; };
 		8D8322182BB35AE0008F9B67 /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8322172BB35AE0008F9B67 /* PlaceAnnotation.swift */; };
 		8D83221B2BB35C17008F9B67 /* CLLocation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83221A2BB35C17008F9B67 /* CLLocation+Extensions.swift */; };
+		8D83221E2BB44EB8008F9B67 /* PlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83221D2BB44EB8008F9B67 /* PlacesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8D1A7C232BB2657100A211E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D8322172BB35AE0008F9B67 /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
 		8D83221A2BB35C17008F9B67 /* CLLocation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+Extensions.swift"; sourceTree = "<group>"; };
+		8D83221D2BB44EB8008F9B67 /* PlacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		8D1A7C142BB2656F00A211E5 /* NearMe */ = {
 			isa = PBXGroup;
 			children = (
+				8D83221C2BB44E88008F9B67 /* Controllers */,
 				8D8322192BB35BCE008F9B67 /* Extensions */,
 				8D8322162BB35ABE008F9B67 /* Annotations */,
 				8D1A7C152BB2656F00A211E5 /* AppDelegate.swift */,
@@ -81,6 +84,14 @@
 				8D83221A2BB35C17008F9B67 /* CLLocation+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8D83221C2BB44E88008F9B67 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8D83221D2BB44EB8008F9B67 /* PlacesTableViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +168,7 @@
 				8D1A7C1A2BB2656F00A211E5 /* ViewController.swift in Sources */,
 				8D1A7C162BB2656F00A211E5 /* AppDelegate.swift in Sources */,
 				8D1A7C182BB2656F00A211E5 /* SceneDelegate.swift in Sources */,
+				8D83221E2BB44EB8008F9B67 /* PlacesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
