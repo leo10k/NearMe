@@ -8,18 +8,18 @@ Introducing an innovative Map app meticulously crafted using MapKit within the U
 
  <p align="center">
 
-  <img src="https://github.com/leo10k/NearMe/assets/85126341/89e63448-b2a9-4f9b-8d40-5a595d1f974c" width="180" title="1">
+  <img src="https://github.com/leo10k/NearMe/assets/85126341/ea1f5d45-f6bc-4111-b45a-a639b98556e2" width="180" title="1">
   &nbsp;
   &nbsp;
   &nbsp;
-  <img src="https://github.com/leo10k/NearMe/assets/85126341/8b02ad07-4f74-4a46-9414-6dbc00fca392" width="180" title="1">
+  <img src="https://github.com/leo10k/NearMe/assets/85126341/0f962733-5a8f-4a4a-9a8d-a004499a899a" width="180" title="1">
   &nbsp;
   &nbsp;
   &nbsp;
-  <img src="https://github.com/leo10k/NearMe/assets/85126341/c590f73d-f116-46ef-8e3e-82abc5aaa7b8" width="180" title="1">
+  <img src="https://github.com/leo10k/NearMe/assets/85126341/638d7af1-7c88-402c-9276-1930860da8ee" width="180" title="1">
   &nbsp;
   &nbsp;
   &nbsp;
-  <img src="https://github.com/leo10k/NearMe/assets/85126341/5d65d6ad-95d5-4928-bd8c-755fd378f8b4" width="180" title="1">
+  <img src="https://github.com/leo10k/NearMe/assets/85126341/e7217945-a1d5-4b2b-807c-9ad2ebaa4575" width="180" title="1">
 
  </p>
