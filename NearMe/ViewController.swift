@@ -80,7 +80,7 @@ class ViewController: UIViewController {
     
     private func checkLocationAuthorization() {
         guard let locationManager = locationManager,
-              let location = locationManager.location else {return}
+              let location = locationManager.location else { return }
         
         switch locationManager.authorizationStatus {
         case .authorizedWhenInUse, .authorizedAlways:
@@ -95,9 +95,12 @@ class ViewController: UIViewController {
         }
     }
     
-    private func presentPlacesSheet() {
+    private func presentPlacesSheet(places: [PlaceAnnotation]) {
         
-        let placesTVC = PlacesTableViewController()
+        guard let locationManager = locationManager,
+              let userLocation = locationManager.location else { return }
+        
+        let placesTVC = PlacesTableViewController(userLocation: userLocation, places: places)
         placesTVC.modalPresentationStyle = .pageSheet
         
         if let sheet = placesTVC.sheetPresentationController {
@@ -125,7 +128,7 @@ class ViewController: UIViewController {
                 self?.mapView.addAnnotation(place)
             }
             
-            self?.presentPlacesSheet()
+            self?.presentPlacesSheet(places: places)
         }
         
     }
